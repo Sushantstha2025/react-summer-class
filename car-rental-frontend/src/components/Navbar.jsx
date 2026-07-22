@@ -13,7 +13,7 @@ const Navbar = () => {
         </nav>
         <div className='flex items-center gap-10'>
             <Search size={32} strokeWidth={1.75} />
-            <a className='font-bold underline text-xl text-blue-600' href="#">Sign In</a>
+            <button className='bg-blue-700 text-white px-3 py-2 rounded-full font-semibold'>Sign In</button>
         </div>
       </div>
   )

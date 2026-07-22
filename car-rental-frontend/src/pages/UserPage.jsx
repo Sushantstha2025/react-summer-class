@@ -1,4 +1,3 @@
-import React from 'react'
 import SidebarComponent from '../components/userDashboard/SidebarComponent'
 import NavbarComponent from '../components/userDashboard/NavbarComponent'
 import MainComponent from '../components/userDashboard/MainComponent'

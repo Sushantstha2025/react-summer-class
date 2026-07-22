@@ -1,7 +1,9 @@
 import { Routes, Route } from 'react-router-dom'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
-import UserDashboard from './pages/UserDashboard'
+import UserPage from './pages/UserPage'
+import AdminPage from './pages/AdminPage'
+import LandingPage from './pages/LandingPage'
 
 const App = () => {
 
@@ -10,7 +12,9 @@ const App = () => {
       <Routes>
         <Route path='/register' element={< RegisterPage/>} />
         <Route path='/login' element={< LoginPage/>} />
-        <Route path='/user' element={<UserDashboard />} />
+        <Route path='/user' element={<UserPage />} />
+        <Route path='/admin' element={<AdminPage />} />
+        <Route path='/landingPage' element={<LandingPage />} />
       </Routes>
     </div>
   )
