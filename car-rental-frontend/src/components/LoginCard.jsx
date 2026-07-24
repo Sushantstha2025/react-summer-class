@@ -1,11 +1,10 @@
-import React from 'react'
 import { Mail } from 'lucide-react';
 import { Lock } from 'lucide-react';
 
 const LoginCard = () => {
   return (
-    <main className='min-h-[calc(100vh-64px-80px)] flex items-center justify-center bg-[#FFFFFF]'>
-        <div className='w-1/4 h-full px-5 py-10 border-gray-400 rounded-lg shadow-lg'>
+    <main className='min-h-[calc(100vh-64px-100px)] flex items-center justify-center bg-[#FFFFFF]'>
+        <div className='w-1/4 h-full px-5 py-7 border-gray-400 rounded-lg shadow-lg'>
         <div className='flex items-center flex-col'>
             <h1 className='text-3xl font-semibold mb-1 tracking-tight'>Welcome Back</h1>
             <h4 className='text-gray-700 text-l mb-7'>Enter your credentials to access your account</h4>

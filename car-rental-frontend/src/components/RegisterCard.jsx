@@ -1,6 +1,6 @@
 const RegisterCard = () => {
   return (
-    <main className='min-h-[calc(100vh-64px-80px)] flex items-center justify-center bg-[#FFFFFF]'>
+    <main className='min-h-[calc(100vh-64px-100px)] flex items-center justify-center bg-[#FFFFFF]'>
         <div className="w-fit h-full px-5 py-5 border-gray-400 rounded-lg shadow-lg">
             <div className='flex flex-col items-center'>
                 <h1 className='text-3xl font-semibold mb-1 tracking-tight'>Create Your Account</h1>
