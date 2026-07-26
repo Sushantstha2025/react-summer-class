@@ -4,6 +4,7 @@ import RegisterPage from './pages/RegisterPage'
 import UserPage from './pages/UserPage'
 import AdminPage from './pages/AdminPage'
 import LandingPage from './pages/LandingPage'
+import ViewFleetPage from './pages/ViewFleetPage'
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
         <Route path='/user' element={<UserPage />} />
         <Route path='/admin' element={<AdminPage />} />
         <Route path='/landingPage' element={<LandingPage />} />
+        <Route path='/viewFleetPage' element={<ViewFleetPage />} />
       </Routes>
     </div>
   )

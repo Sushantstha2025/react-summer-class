@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 const LoginPage = () => {
   return (
     <div className='bg-[#f8fafced] min-h-screen w-full text-black'>
-      <Navbar />
+      <Navbar state={false}/>
       <LoginCard />
       <Footer />
     </div>
