@@ -1,9 +1,9 @@
-name: Backend CI/CD
+name: Frontend CI/CD
 
 on:
   push:
     branches: [master]
-    paths: ['backend/**']
+    paths: ['car-rental-frontend/**']
 
 jobs:
   build-and-push:
@@ -17,8 +17,8 @@ jobs:
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-          IMAGE: car-rental-backend
-          CONTEXT: ./backend
+          IMAGE: car-rental-frontend
+          CONTEXT: ./car-rental-frontend
 
   deploy:
     needs: build-and-push
@@ -31,9 +31,9 @@ jobs:
         run: bash scripts/deploy.sh
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-          IMAGE: car-rental-backend
-          CONTAINER: car-rental-backend
-          PORT: 3000
+          IMAGE: car-rental-frontend
+          CONTAINER: car-rental-frontend
+          PORT: 5000
           EC2_HOST: ${{ secrets.EC2_HOST }}
           EC2_USER: ${{ secrets.EC2_USER }}
           EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
