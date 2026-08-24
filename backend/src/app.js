@@ -5,6 +5,8 @@ import userRoutes from "../src/routes/user.routes.js"
 import resetPasswordRoute from "../src/routes/passwordReset.routes.js"
 import rentalRoutes from "../src/routes/rental.routes.js"
 import vehicleRoutes from "../src/routes/vehicle.routes.js"
+ 
+// Docker cache test
 
 const app = express()
 
@@ -17,3 +19,4 @@ app.use("/api/rents", rentalRoutes)
 app.use("/api/cars", vehicleRoutes)
 
 export default app
+// CI/CD test
