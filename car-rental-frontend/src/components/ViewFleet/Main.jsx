@@ -6,7 +6,7 @@ import VehicleCard from "./VehicleCard"
 
 const Main = ({ cars, searchTerm, setSearchTerm, sortBy, setSortBy }) => {
   return (
-    <main className='w-full flex bg-[#FAF8FF] min-h-screen'>
+    <main className='w-full flex flex-col lg:flex-row bg-[#FAF8FF] min-h-screen'>
       <SideBar />
 
       <div className="main-content flex-1">
@@ -19,7 +19,7 @@ const Main = ({ cars, searchTerm, setSearchTerm, sortBy, setSortBy }) => {
           setSortBy={setSortBy}
         />
 
-        <div className='cards-container flex flex-wrap items-center justify-start gap-8 px-12 py-7'>
+        <div className='cards-container flex flex-wrap items-center justify-center lg:justify-start gap-6 px-4 sm:px-8 lg:px-12 py-7'>
           {cars.length > 0 ? (
             cars.map((car) => (
               <VehicleCard key={car._id || car.id} car={car} />

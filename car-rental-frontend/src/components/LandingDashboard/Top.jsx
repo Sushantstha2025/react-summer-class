@@ -8,13 +8,13 @@ const Top = () => {
       <div className="relative">
                 <img className="h-[calc(100vh-54px-80px)] object-cover w-full" src="https://imgs.search.brave.com/0-mo4AvkkeHO-nrsmnMQZ3ZM1cVKf4YeUG7Hof_QsIc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L3ByZW1pdW0tcGhv/dG8vY2FyLWRyaXZp/bmctZG93bi1yb2Fk/LXN1bnNldF8xMDcy/MTM4LTI1MDQyMS5q/cGc_c2VtdD1haXNf/aHlicmlkJnc9NzQw/JnE9ODA" alt="loading"/>
 
-                <div className="absolute top-48 px-10">
-                <h1 className="font-bold text-4xl text-white mb-3">
+                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 px-5 sm:px-10">
+                <h1 className="font-bold text-3xl sm:text-4xl text-white mb-3">
                     Find Your Perfect Ride
                 </h1>
 
-                <h4 className="text-gray-300 font-semibold mb-4">
-                    Premium vehicle rentals for your next journey. Rent quickly and travel in style <br /> with our curated fleet of luxury and performance cars.
+                <h4 className="max-w-xl text-gray-300 font-semibold mb-4">
+                    Premium vehicle rentals for your next journey. Rent quickly and travel in style with our curated fleet of luxury and performance cars.
                 </h4>
 
                 <div className="flex gap-4">
@@ -31,7 +31,7 @@ const Top = () => {
 
             <div className='relative z-10 max-w-8xl mx-auto -mt-12 px-6'>
                 <div className='bg-[#FAF8FF] rounded-lg p-5 shadow-xl'>
-                <form className="grid grid-cols-5 gap-4 items-end">
+                <form className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
                     <div className="flex flex-col">
                         <label htmlFor="pickup" className="mb-2">Pickup Location</label>
                         <input id="pickup" type="text" placeholder="City, Airport..." className="border border-gray-400 rounded-lg px-4 py-3"/>
@@ -61,7 +61,7 @@ const Top = () => {
                         </div>
                     </div>
 
-                    <button className="bg-blue-900 text-white rounded-lg px-6 py-3 h-fit">Search</button>
+                    <button className="bg-blue-900 text-white rounded-lg px-6 py-3 h-fit hover:bg-blue-800 transition">Search</button>
                 </form>
 
                 </div>

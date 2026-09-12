@@ -1,4 +1,4 @@
-import { Banknote } from 'lucide-react';
+import { Banknote, Clock3, ShieldCheck, Sparkles } from 'lucide-react';
 import Footer from '../Footer'
 
 const Bottom = () => {
@@ -9,31 +9,19 @@ const Bottom = () => {
                 <h3 className='text-blue-500 text-xl tracking-tight font-sans'>THE LUXE DIFFERENCE</h3>
                 <h1 className='text-blue-900 text-3xl mt-1 font-bold'>Why Choose Luxe Drive?</h1>
             </div>
-            <div className='flex flex-wrap mt-10 gap-10 justify-center'>
-                <div className='bg-white flex flex-col justify-center items-center gap-4 p-5 border-2 border-gray-200 translate-y-1 hover:translate-y-0 hover:shadow-lg duration-200 rounded-2xl h-70 w-70'>
-                    <Banknote className='w-15 h-15 bg-[#1E3A8A] text-[#90A8FF] p-3 rounded-full' size={20} strokeWidth={2} />
-                    <h3 className='text-[#1E3A8A] font-serif'>Affordable Pricing</h3>
-                    <p className='font-serif text-gray-700 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur debitis labore amet iusto necessitatibus, totam eaque vero saepe unde quis quasi.</p>
-                </div>
-
-                <div className='bg-white flex flex-col justify-center items-center gap-4 p-5 border-2 border-gray-200 translate-y-1 hover:translate-y-0 hover:shadow-lg duration-200 rounded-2xl h-70 w-70'>
-                    <Banknote className='w-15 h-15 bg-[#1E3A8A] text-[#90A8FF] p-3 rounded-full' size={20} strokeWidth={2} />
-                    <h3 className='text-[#1E3A8A] font-serif'>Affordable Pricing</h3>
-                    <p className='font-serif text-gray-700 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur debitis labore amet iusto necessitatibus, totam eaque vero saepe unde quis quasi.</p>
-                </div>
-
-                <div className='bg-white flex flex-col justify-center items-center gap-4 p-5 border-2 border-gray-200 translate-y-1 hover:translate-y-0 hover:shadow-lg duration-200 rounded-2xl h-70 w-70'>
-                    <Banknote className='w-15 h-15 bg-[#1E3A8A] text-[#90A8FF] p-3 rounded-full' size={20} strokeWidth={2} />
-                    <h3 className='text-[#1E3A8A] font-serif'>Affordable Pricing</h3>
-                    <p className='font-serif text-gray-700 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur debitis labore amet iusto necessitatibus, totam eaque vero saepe unde quis quasi.</p>
-                </div>
-
-                <div className='bg-white flex flex-col justify-center items-center gap-4 p-5 border-2 border-gray-200 translate-y-1 hover:translate-y-0 hover:shadow-lg duration-200 rounded-2xl h-70 w-70'>
-                    <Banknote className='w-15 h-15 bg-[#1E3A8A] text-[#90A8FF] p-3 rounded-full' size={20} strokeWidth={2} />
-                    <h3 className='text-[#1E3A8A] font-serif'>Affordable Pricing</h3>
-                    <p className='font-serif text-gray-700 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur debitis labore amet iusto necessitatibus, totam eaque vero saepe unde quis quasi.</p>
-                </div>
-                
+            <div className='flex flex-wrap mt-10 gap-6 justify-center'>
+                {[
+                    { icon: Banknote, title: 'Affordable Pricing', text: 'Transparent daily rates with no surprise fees at checkout.' },
+                    { icon: ShieldCheck, title: 'Trusted Vehicles', text: 'Every vehicle is inspected and ready for the road.' },
+                    { icon: Clock3, title: 'Flexible Rentals', text: 'Convenient pickup and return options for your schedule.' },
+                    { icon: Sparkles, title: 'Premium Experience', text: 'A carefully selected fleet for comfortable journeys.' },
+                ].map(({ icon: Icon, title, text }) => (
+                    <div key={title} className='bg-white flex flex-col justify-center items-center gap-4 p-5 border-2 border-gray-200 translate-y-1 hover:translate-y-0 hover:shadow-lg duration-200 rounded-2xl h-70 w-70'>
+                        <Icon className='w-15 h-15 bg-[#1E3A8A] text-[#90A8FF] p-3 rounded-full' size={20} strokeWidth={2} />
+                        <h3 className='text-[#1E3A8A] font-serif'>{title}</h3>
+                        <p className='font-serif text-gray-700 text-center'>{text}</p>
+                    </div>
+                ))}
             </div>
         </section>
 

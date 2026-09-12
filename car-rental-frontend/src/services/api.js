@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000/api";
+const BASE_URL = "/api";
 
 const getAuthHeader = () => {
   const token = localStorage.getItem("token");
@@ -21,35 +21,40 @@ export const apiRequest = async (endpoint, method = "GET", body = null, isFormDa
     config.body = isFormData ? body : JSON.stringify(body);
   }
 
-  try {
-    const response = await fetch(`${BASE_URL}${endpoint}`, config);
-    const contentType = response.headers.get('content-type') || '';
-    let data;
+  const response = await fetch(`${BASE_URL}${endpoint}`, config);
+const contentType = response.headers.get('content-type') || '';
 
-    if (contentType.includes('application/json')) {
-      data = await response.json();
-    } else {
-      const text = await response.text();
-      // If server returned non-JSON (HTML error page), surface the text to the caller
-      if (response.ok) {
-        try {
-          data = JSON.parse(text);
-        } catch {
-          data = text;
-        }
-      } else {
-        throw new Error(text || `Request failed with status ${response.status}`);
-      }
+let data;
+
+try {
+  if (contentType.includes('application/json')) {
+    data = await response.json();
+  } else {
+    const text = await response.text();
+
+    try {
+      data = JSON.parse(text);
+    } catch {
+      data = text;
     }
-
-    if (!response.ok) {
-      throw new Error((data && data.message) || data || `Request failed with status ${response.status}`);
-    }
-
-    return data;
-  } catch (error) {
-    throw error;
   }
+} catch (error) {
+  throw new Error(`Failed to parse server response: ${error.message}`);
+}
+
+if (!response.ok) {
+  const message =
+    typeof data === 'object' && data !== null
+      ? data.message || data.error
+      : data;
+
+  throw new Error(
+    message || `Request failed with status ${response.status}`
+  );
+}
+
+return data;
+
 };
 
 export const authAPI = {

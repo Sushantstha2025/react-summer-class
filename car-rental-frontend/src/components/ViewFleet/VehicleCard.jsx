@@ -7,7 +7,7 @@ const VehicleCard = ({ car }) => {
   const defaultImage = "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80";
 
   return (
-    <div className='card w-75 h-100 bg-[#FFFFFF] rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between overflow-hidden'>
+    <div className='card w-full sm:w-75 h-100 bg-[#FFFFFF] rounded-xl border border-gray-200 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between overflow-hidden'>
       <div>
         <div className='image-div w-full bg-gray-100 overflow-hidden'>
           <img 

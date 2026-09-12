@@ -3,9 +3,9 @@ import { ArrowDownFromLine, Search } from 'lucide-react';
 
 const SearchBar = ({ count = 0, searchTerm = '', setSearchTerm, sortBy = '', setSortBy }) => {
   return (
-    <div className='relative z-10 px-12 py-4'>
+    <div className='relative z-10 px-4 sm:px-8 lg:px-12 py-4'>
       <div className='bg-[#F4F3FA] rounded-xl p-5 shadow-sm border border-gray-200 flex flex-col md:flex-row justify-between items-center w-full gap-4'>
-        <h1 className='text-2xl font-bold text-blue-900'>{count} Cars Available</h1>
+        <h1 className='text-xl sm:text-2xl font-bold text-blue-900'>{count} Cars Available</h1>
         <div className="flex flex-col sm:flex-row gap-4 items-center w-full md:w-auto">
           <div className="relative w-full sm:w-64">
             <input 
